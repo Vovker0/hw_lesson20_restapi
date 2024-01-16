@@ -46,9 +46,9 @@ public class ApiTests extends TestBase{
     public void unsuccessfulGetResourceTest() {
         given()
                 .log().uri()
-                .when()
+        .when()
                 .get("/unknown/13")
-                .then()
+        .then()
                 .log().status()
                 .log().body()
                 .statusCode(404);
@@ -88,9 +88,9 @@ public class ApiTests extends TestBase{
                 .body(userCredential)
                 .contentType(JSON)
                 .log().uri()
-            .when()
+        .when()
                 .patch("/users/2")
-            .then()
+        .then()
                 .log().status()
                 .log().body()
                 .statusCode(200)
